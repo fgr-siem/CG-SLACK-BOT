@@ -1,0 +1,22 @@
+service: forex2
+
+frameworkVersion: "<=1.6.1"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  stage: dev
+  region: eu-west-1
+  environment:
+    CLIENT_ID: '248637609969.249700715059'
+    CLIENT_SECRET: 'd86a8715f89a5a1abfa795d503e473a9'
+    INSTALL_SUCCESS_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#success
+    INSTALL_ERROR_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#error
+
+functions:
+  install:
+    handler: install.handler
+    events:
+      - http:
+          path: install
+          method: get
