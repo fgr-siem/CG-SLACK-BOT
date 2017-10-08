@@ -14,6 +14,7 @@ provider:
   environment:
     CLIENT_ID: '248637609969.250797638595'
     CLIENT_SECRET: a1340018f930fd434f236bdb5de610a8
+    VERIFICATION_TOKEN: 3pZSp7Iey40IJisiWPFCQdJC
     INSTALL_ERROR_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#error
     INSTALL_SUCCESS_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#success
     NAMESPACE: ${self:custom.namespace}
